@@ -1715,7 +1715,7 @@ function random(seed) {
                 .concat(1e3, ";\n  }\n  #system-toaster {\n    z-index: ")
                 .concat(
                     4e3,
-                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n         NUMBERLE\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
+                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n         Rewardle\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
                 );
         var Qa = document.createElement("template");
         Qa.innerHTML =
@@ -3041,7 +3041,7 @@ function random(seed) {
             </div>`;
         var Is = document.createElement("template");
         Is.innerHTML = `<div class="countdown">
-              <h1>Next NUMBERLE</h1>
+              <h1>Next Rewardle</h1>
               <div id="timer">
                 <div class="statistic-container">
                   <div class="statistic timer">
@@ -3211,7 +3211,7 @@ function random(seed) {
                                                                     )
                                                                 ),
                                                                 l =
-                                                                    "Numberle ".concat(
+                                                                    "Rewardle ".concat(
                                                                         s
                                                                     );
                                                             (l += " "
@@ -3491,8 +3491,10 @@ function random(seed) {
             </style>
             <section>
               <div class="instructions">
-                <p>Guess the <strong>NUMBERLE</strong> in 6 tries.</p>
-                <p>This is a silly adaptation of Josh Wardle's <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
+                <p>
+                Guess the <strong>Rewardle</strong> in 6 tries.</p>
+                <p>Guess the reward you need to pay Bethan today.</p>
+                <p>If you don't guess the reward within 5 minutes you must pay her a £100,000 reward.</p>
                 <p>Each guess must be a valid 5 digit number. Hit the enter button to submit.</p>
                 <p>After each guess, the color of the tiles will change to show how close your guess was to the number.</p>
                 <div class="examples">
@@ -3528,7 +3530,7 @@ function random(seed) {
                     <p>The digit <strong>7</strong> is not in the number in any spot.</p>
                   </div>
                 </div>
-                <p><strong>A new NUMBERLE will be available each day!<strong></p>
+                <p><strong>A new Rewardle will be available each day!<strong></p>
               </div>
             </section>`;
         var Hs = (function (e) {
